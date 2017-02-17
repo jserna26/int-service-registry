@@ -1,0 +1,11 @@
+package: github.com/jserna26/SystemPOC
+import:
+- package: github.com/gorilla/mux
+  version: ^1.1.0
+- package: github.com/rbrumby/scaffold
+  version: ^0.7.0
+- package: github.com/cloudfoundry-community/go-cfenv
+  version: ^1.14.0
+testImport:
+- package: github.com/op/go-logging
+  version: ^1.0.0

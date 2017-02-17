@@ -1,0 +1,17 @@
+{
+  "name": "SystemPOC",
+  "description": "Integration Architecture Concepts POC",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.8.0"
+  }
+}

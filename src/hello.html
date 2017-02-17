@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="hello-jon" attributes="name">
+  <template>
+    <style>
+      h1 {
+        font-family: sans-serif;
+        text-shadow: 1px 1px 3px rgba(0,0,3,3);
+      }
+    </style>
+    <h1>Hello {{name}}. I am a polymer element!</h1>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "hello-jon",
+    properties: {
+      name: {
+        value:"Jon"
+      }
+    }
+  });
+</script>
