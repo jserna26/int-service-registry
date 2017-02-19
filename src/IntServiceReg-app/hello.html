@@ -1,0 +1,61 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="bower_components/iron-icons/av-icons.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="hello-jon" attributes="name">
+  <template>
+    <style is="custom-style" include="iron-flex" >
+      h1 {
+        font-family: sans-serif;
+        text-shadow: 1px 1px 3px rgba(0,0,3,3);
+      }
+      paper-toolbar {
+        background:#333;
+        color: #FFF;
+      }
+      .example {
+        background:#333;
+        padding:10px;
+      }
+      .example > div {
+        background:#eee;
+        margin: 10px;
+      }
+    </style>
+
+
+    <paper-header-panel mode="waterfall">
+      <paper-toolbar>
+        <iron-icon icon="av:games"></iron-icon>
+        <h1>Hello {{name}}</h1>
+        <iron-icon icon="av:games"></iron-icon>
+      </paper-toolbar>
+    </paper-header-panel>
+
+
+
+    <input type="text" value="{{name::input}}">
+    <button id="btn" on-click="changeName">Change Name</button>
+    <paper-tooltip for="btn" position="right">Tooltip text</paper-tooltip>
+    <div class="example layout vertical container">
+      <div class="flex">One</div>
+      <div class="flex">Two</div>
+      <div class="flex">Three</div>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "hello-jon",
+    ready: function(){
+      this.name = "jon";
+    },
+    changeName: function(){
+      this.name = "Champ"
+    }
+  });
+</script>
